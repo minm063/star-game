@@ -16,8 +16,4 @@ public class HighTempler extends Protos {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return false;
-    }
 }

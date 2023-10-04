@@ -16,8 +16,4 @@ public class Ultralisk extends Zerg {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return false;
-    }
 }

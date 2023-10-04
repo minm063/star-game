@@ -15,8 +15,4 @@ public class Tank extends Terran {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return false;
-    }
 }

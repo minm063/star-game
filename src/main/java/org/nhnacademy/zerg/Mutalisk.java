@@ -1,8 +1,9 @@
 package org.nhnacademy.zerg;
 
 import org.nhnacademy.Zerg;
+import org.nhnacademy.attackType.Flyable;
 
-public class Mutalisk extends Zerg {
+public class Mutalisk extends Zerg implements Flyable {
     private static final int ATTACK_POWER = 2;
     private static final int DEFENSE_POWER = 8;
     private static final String UNIT_NAME = "Mutalisk";
@@ -16,8 +17,4 @@ public class Mutalisk extends Zerg {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return true;
-    }
 }
