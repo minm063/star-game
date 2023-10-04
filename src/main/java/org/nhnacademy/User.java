@@ -58,24 +58,25 @@ public class User {
                 File file = new File("src/main/java/org/nhnacademy/terran");
                 String[] terrans = file.list();
                 random = new Random();
-                for (int i = 0; i < 5; i++) {
-                    try {
+                try {
+                    for (int i = 0; i < 5; i++) {
                         String unit = terrans[random.nextInt(terrans.length)];
                         // string을 클래스 객체로
-                        Object o = Class.forName("org.nhnacademy.terran." + unit.replace(".java", "")).getDeclaredConstructor().newInstance();
+                        Object o = Class.forName("org.nhnacademy.terran." + unit.replace(".java", ""))
+                                .getDeclaredConstructor().newInstance();
                         // arrayList에 추가
                         units.add((Unit) o);
-                    } catch (Exception e) {
-                        throw new RuntimeException("파일을 읽어오지 못했습니다.");
                     }
+                } catch (Exception e) {
+                    throw new RuntimeException("파일을 읽어오지 못했습니다.");
                 }
                 break;
             case "protos":
                 file = new File("src/main/java/org/nhnacademy/protos");
                 String[] protosList = file.list();
                 random = new Random();
-                for (int i = 0; i < 4; i++) {
-                    try {
+                try {
+                    for (int i = 0; i < 4; i++) {
                         String unit = protosList[random.nextInt(protosList.length)];
                         // string을 클래스 객체로
                         Object o =
@@ -83,17 +84,17 @@ public class User {
                                         .getDeclaredConstructor().newInstance();
                         // arrayList에 추가
                         units.add((Unit) o);
-                    } catch (Exception e) {
-                        throw new RuntimeException("파일을 읽어오지 못했습니다.");
                     }
+                } catch (Exception e) {
+                    throw new RuntimeException("파일을 읽어오지 못했습니다.");
                 }
                 break;
             case "zerg":
                 file = new File("src/main/java/org/nhnacademy/zerg");
                 String[] zergList = file.list();
                 random = new Random();
-                for (int i = 0; i < 8; i++) {
-                    try {
+                try {
+                    for (int i = 0; i < 8; i++) {
                         String unit = zergList[random.nextInt(zergList.length)];
                         // string을 클래스 객체로
                         Object o =
@@ -101,9 +102,9 @@ public class User {
                                         .getDeclaredConstructor().newInstance();
                         // arrayList에 추가
                         units.add((Unit) o);
-                    } catch (Exception e) {
-                        throw new RuntimeException("파일을 읽어오지 못했습니다.");
                     }
+                } catch (Exception e) {
+                    throw new RuntimeException("파일을 읽어오지 못했습니다.");
                 }
                 break;
             default:
