@@ -1,8 +1,9 @@
 package org.nhnacademy.terran;
 
 import org.nhnacademy.Terran;
+import org.nhnacademy.attackType.Flyable;
 
-public class Wraith extends Terran {
+public class Wraith extends Terran implements Flyable {
     private static final int ATTACK_POWER = 3;
     private static final int DEFENSE_POWER = 10;
     private static final String UNIT_NAME = "Wraith";
@@ -16,8 +17,4 @@ public class Wraith extends Terran {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return true;
-    }
 }

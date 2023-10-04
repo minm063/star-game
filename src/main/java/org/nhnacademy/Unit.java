@@ -5,6 +5,5 @@ public interface Unit {
     public int getDefensePower();
     public String getUnitName();
     public String getSpeciesName();
-    public boolean getFlyableWeapon();
     public void attackDefensePower(int attackPower);
 }

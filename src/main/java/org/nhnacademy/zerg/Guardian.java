@@ -1,8 +1,9 @@
 package org.nhnacademy.zerg;
 
 import org.nhnacademy.Zerg;
+import org.nhnacademy.attackType.Flyable;
 
-public class Guardian extends Zerg {
+public class Guardian extends Zerg implements Flyable {
     private static final int ATTACK_POWER = 3;
     private static final int DEFENSE_POWER = 6;
     private static final String UNIT_NAME = "Guardian";
@@ -16,8 +17,4 @@ public class Guardian extends Zerg {
         return UNIT_NAME;
     }
 
-    @Override
-    public boolean getFlyableWeapon() {
-        return true;
-    }
 }
